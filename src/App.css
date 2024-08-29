@@ -17,16 +17,17 @@
 
 header {
   background-color: yellow;
-  height: 25%;
+  height: 18%;
 }
 
 main {
   background-color: greenyellow;
-  height: 75%;
+  height: 70%;
 }
 
 footer {
   background-color: yellow;
+  height: 40px;
 }
 
 .inactiveLinkStyle {
@@ -43,4 +44,5 @@ footer {
   font-weight: bolder;
   background-color: hotpink;
 }
+
 

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import './App.css'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
         </main>
 
         <footer>
-          <p>Footer goes here</p>
+          <Footer />
         </footer>
       </div>
     </>
