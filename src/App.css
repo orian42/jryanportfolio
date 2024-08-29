@@ -29,4 +29,18 @@ footer {
   background-color: yellow;
 }
 
+.inactiveLinkStyle {
+  padding: 5px;
+  text-decoration: none;
+  color: inherit
+}
+
+.activeLinkStyle {
+  border: 2px black solid;
+  padding: 5px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bolder;
+  background-color: hotpink;
+}
 

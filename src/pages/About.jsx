@@ -2,7 +2,8 @@ export default function About() {
 
     return (
         <div>
-            <p>This is the ABOUT content.</p>
+            <h1>ABOUT ME</h1>
+            <img />
         </div>
     )
 }

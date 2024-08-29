@@ -7,12 +7,15 @@ export default function Nav() {
         border: "1px black",
         padding: "5px",
         display: "flex",
+        color: "inherit"
     };
     const activeLinkStyle = {
-        border: "1px black",
+        border: "2px black solid",
         background: "white",
         padding: "5px",
         display: "flex",
+        textDecoration: "none",
+        color: "inherit"
     };
 
     return (
@@ -28,30 +31,19 @@ export default function Nav() {
                 }}
             >
                 <h1>Jason M. Ryan</h1>
-                <ul>
-                    <li>
+                    <p>
                         <Link
                             to="/"
                             className={
-                                currentPage === "/" ? "activeLinkStyle" : "inactiveLinkStyle"
-                            }
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/About"
-                            className={
-                                currentPage === "/About"
+                                currentPage === "/"
                                     ? "activeLinkStyle"
                                     : "inactiveLinkStyle"
                             }
                         >
                             About Me
                         </Link>
-                    </li>
-                    <li>
+                    </p>
+                    <p>
                         <Link
                             to="/Portfolio"
                             className={
@@ -62,8 +54,8 @@ export default function Nav() {
                         >
                             Portfolio
                         </Link>
-                    </li>
-                    <li>
+                    </p>
+                    <p>
                         <Link
                             to="/Contact"
                             className={
@@ -74,8 +66,8 @@ export default function Nav() {
                         >
                             Contact Me
                         </Link>
-                    </li>
-                    <li>
+                    </p>
+                    <p>
                         <Link
                             to="/Resume"
                             className={
@@ -86,8 +78,7 @@ export default function Nav() {
                         >
                             Resume
                         </Link>
-                    </li>
-                </ul>
+                    </p>
             </section>
         </nav>
     );
