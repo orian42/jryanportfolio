@@ -1,13 +1,9 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import Nav from './components/Nav'
-import About from './components/About'
-import Portfolio from './components/Portfolio'
-import Contact from './components/Contact'
-import Resume from './components/Resume'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -17,7 +13,7 @@ function App() {
         </header>
 
         <main>
-          <p>Content goes here</p>
+          <Outlet />
         </main>
 
         <footer>
