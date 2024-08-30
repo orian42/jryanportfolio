@@ -3,21 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 export default function Nav() {
     const currentPage = useLocation().pathname;
 
-    const inactiveLinkStyle = {
-        border: "1px black",
-        padding: "5px",
-        display: "flex",
-        color: "inherit"
-    };
-    const activeLinkStyle = {
-        border: "2px black solid",
-        background: "white",
-        padding: "5px",
-        display: "flex",
-        textDecoration: "none",
-        color: "inherit"
-    };
-
     return (
         <nav>
             <section
@@ -30,56 +15,76 @@ export default function Nav() {
                     justifyContent: "space-evenly",
                 }}
             >
-                <h1>Jason M. Ryan</h1>
-                    <p>
-                        <Link
-                            to="/"
+                <h1 class="title is-1">Jason M. Ryan</h1>
+                <div class="tabs is-boxed">
+                    <ul>
+                        <li
                             className={
                                 currentPage === "/"
-                                    ? "activeLinkStyle"
-                                    : "inactiveLinkStyle"
+                                    ? "is-active"
+                                    : "is-inactive"
                             }
                         >
-                            About Me
-                        </Link>
-                    </p>
-                    <p>
-                        <Link
-                            to="/Portfolio"
+                            <Link
+                                to="/"
+                            >
+                                <span class="icon is-small"
+                                ><i class="fa-regular fa-user" aria-hidden="true"></i
+                                ></span>
+                                <span>About Me</span>
+                            </Link>
+                        </li>
+                        <li
                             className={
                                 currentPage === "/Portfolio"
-                                    ? "activeLinkStyle"
-                                    : "inactiveLinkStyle"
+                                    ? "is-active"
+                                    : "is-inactive"
                             }
                         >
-                            Portfolio
-                        </Link>
-                    </p>
-                    <p>
-                        <Link
-                            to="/Contact"
+                            <Link
+                                to="/Portfolio"
+                            >
+                                <span class="icon is-small"
+                                ><i class="fa-regular fa-lightbulb" aria-hidden="true"></i
+                                ></span>
+                                <span>Portfolio</span>
+                            </Link>
+                        </li>
+                        <li
                             className={
                                 currentPage === "/Contact"
-                                    ? "activeLinkStyle"
-                                    : "inactiveLinkStyle"
+                                    ? "is-active"
+                                    : "is-inactive"
                             }
                         >
-                            Contact Me
-                        </Link>
-                    </p>
-                    <p>
-                        <Link
-                            to="/Resume"
+                            <Link
+                                to="/Contact"
+                            >
+                                <span class="icon is-small"
+                                ><i class="fa-regular fa-envelope"></i
+                                ></span>
+                                <span>Contact Me</span>
+                            </Link>
+                        </li>
+                        <li
                             className={
                                 currentPage === "/Resume"
-                                    ? "activeLinkStyle"
-                                    : "inactiveLinkStyle"
+                                    ? "is-active"
+                                    : "is-inactive"
                             }
                         >
-                            Resume
-                        </Link>
-                    </p>
+                            <Link
+                                to="/Resume"
+                            >
+                                <span class="icon is-small"
+                                ><i class="far fa-file-alt" aria-hidden="true"></i
+                                ></span>
+                                <span>Resume</span>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </nav>
-    );
+    )
 }

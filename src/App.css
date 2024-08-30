@@ -27,10 +27,9 @@ main {
 
 footer {
   background-color: yellow;
-  height: 40px;
 }
 
-.inactiveLinkStyle {
+/* .inactiveLinkStyle {
   padding: 5px;
   text-decoration: none;
   color: inherit
@@ -43,6 +42,6 @@ footer {
   color: inherit;
   font-weight: bolder;
   background-color: hotpink;
-}
+} */
 
 

@@ -9,7 +9,7 @@ export default function About() {
                     src="./src/assets/jason.JPEG"
                     style={{margin: '5px', 
                         padding: '5px',
-                        width: '33%'
+                        height: '359px',
                     }}
                 />
                 <div style={{
