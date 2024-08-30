@@ -9,6 +9,7 @@ export default function Contact() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const [buttonDisable, setButtonDisable] = useState(true);
 
     const handleInputChange = (e) => {
         //Gets the name and value of the form field being changed
@@ -21,7 +22,14 @@ export default function Contact() {
         } else {
             setMessage(value);
         }
-    }
+
+        // Final validation - submit button activates when all fields are validated; otherwise, is disabled
+        if (userName && message && validateEmail(email)) {
+            setButtonDisable(false);
+        } else {
+            setButtonDisable(true);
+        }
+    };
 
     const handleBlur = (e) => {
         //Gets the name and value of the form field being changed
@@ -42,7 +50,17 @@ export default function Contact() {
         }
         // Clear error message if input is valid
         setErrorMessage('');
-    }
+    };
+
+    const handleSubmit = (e) => {
+        //prevent default behavior
+        e.preventDefault();
+
+        //Clear field values
+        setUserName('');
+        setEmail('');
+        setMessage('');
+    };
 
     return (
         <div>
@@ -81,13 +99,15 @@ export default function Contact() {
                     onBlur={handleBlur}
                 />
 
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={buttonDisable}>Submit</button>
             </form>
+            
+            {/* Error messages will display here */}
             {errorMessage && (
                 <div>
                     <p>{errorMessage}</p>
                 </div>
             )}
         </div>
-    )
+    );
 }
