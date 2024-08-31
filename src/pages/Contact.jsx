@@ -36,12 +36,12 @@ export default function Contact() {
         const { name } = e.target;
 
         //check to see if email is invalid or form is empty
-        if (name === 'email' && !validateEmail(email)) {
-            setErrorMessage('Please enter a valid email address to proceed.');
-            return;
-        }
         if (name === 'name' && !userName) {
             setErrorMessage('Your name is required to proceed.');
+            return;
+        }
+        if (name === 'email' && !validateEmail(email)) {
+            setErrorMessage('Please enter a valid email address to proceed.');
             return;
         }
         if (name === 'message' && !message) {
@@ -64,49 +64,69 @@ export default function Contact() {
 
     return (
         <div>
-            <h1>CONTACT ME</h1>
+            <h1 class="title is-2">CONTACT ME</h1>
             <form
-                style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '50%' }}
+                style={{ margin: '10px', width: '50%' }}
             >
-                <label htmlFor="name">Name:</label>
-                <input
-                    id="name"
-                    type="text"
-                    name="name"
-                    value={userName}
-                    onChange={handleInputChange}
-                    onBlur={handleBlur}
-                />
+                <div class="field">
+                    <label htmlFor="name" class="label">Name:</label>
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        class="input is-link"
+                        placeholder="Name"
+                        value={userName}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                    />
+                </div>
 
-                <label htmlFor="email">Email:</label>
-                <input
-                    id="email"
-                    type="text"
-                    name="email"
-                    value={email}
-                    onChange={handleInputChange}
-                    onBlur={handleBlur}
-                />
+                <div class="field">
+                    <label htmlFor="email" class="label">Email:</label>
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        class="input is-link"
+                        placeholder="Email"
+                        value={email}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                    />
+                </div>
 
-                <label htmlFor="message">Message:</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="10"
-                    cols="50"
-                    value={message}
-                    onChange={handleInputChange}
-                    onBlur={handleBlur}
-                />
+                <div class="field">
+                    <label htmlFor="message" class="label">Message:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Type your message here"
+                        class="textarea is-link"
+                        rows="5"
+                        value={message}
+                        onChange={handleInputChange}
+                        onBlur={handleBlur}
+                    />
+                </div>
 
-                <button type="submit" disabled={buttonDisable}>Submit</button>
+                <div class="field">
+                    <button
+                        type="submit"
+                        class="button is-link"
+                        disabled={buttonDisable}
+                    >Submit</button>
+                </div>
+
             </form>
-            
+
             {/* Error messages will display here */}
             {errorMessage && (
-                <div>
-                    <p>{errorMessage}</p>
-                </div>
+                <article class="message is-danger">
+                    <div class="message-header">
+                        <p>{errorMessage}</p>
+                    </div>
+                </article>
             )}
         </div>
     );

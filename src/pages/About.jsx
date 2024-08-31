@@ -3,7 +3,7 @@ export default function About() {
 
     return (
         <div>
-            <h1>ABOUT ME</h1>
+            <h1 class="title is-2">ABOUT ME</h1>
             <div style={{display: 'flex'}}>
                 <img 
                     src="./src/assets/jason.JPEG"
