@@ -9,15 +9,15 @@ function App() {
   return (
     <>
       <div className="container">
-        <header>
+        <header class="notification is-primary">
           <Nav />
         </header>
 
-        <main>
+        <main class="notification is-primary">
           <Outlet />
         </main>
 
-        <footer>
+        <footer class="notification is-primary">
           <Footer />
         </footer>
       </div>

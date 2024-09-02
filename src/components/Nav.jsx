@@ -1,88 +1,82 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 export default function Nav() {
     const currentPage = useLocation().pathname;
+    const [isMenuActive, setIsMenuActive] = useState(false);
+
+    // Toggle the menu visibility
+    const toggleMenu = () => {
+        setIsMenuActive(!isMenuActive);
+    };
 
     return (
         <nav>
-            <section
-                style={{
-                    height: "100%",
-                    display: "flex",
-                    fontFamily: "helvetica",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-evenly",
-                }}
-            >
-                <h1 class="title is-1">Jason M. Ryan</h1>
-                <div class="tabs is-boxed">
-                    <ul>
-                        <li
-                            className={
-                                currentPage === "/"
-                                    ? "is-active"
-                                    : "is-inactive"
-                            }
+            <section className="navContent navbar">
+                <div className="navbar-brand">
+                    <h1 className="title is-1">JASON M. RYAN</h1>
+
+                    <a 
+                        role="button" 
+                        className={`navbar-burger ${isMenuActive ? "is-active" : ""}`} 
+                        aria-label="menu" 
+                        aria-expanded="false" 
+                        data-target="portfolioNavbar"
+                        onClick={toggleMenu} 
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div 
+                    id="portfolioNavbar" 
+                    className={`navbar-menu ${isMenuActive ? "is-active" : ""}`}
+                >
+                    <div className="navbar-start">
+
+                        <Link
+                            to="/"
+                            className="navbar-item"
                         >
-                            <Link
-                                to="/"
-                            >
-                                <span class="icon is-small"
-                                ><i class="fa-regular fa-user" aria-hidden="true"></i
-                                ></span>
-                                <span>About Me</span>
-                            </Link>
-                        </li>
-                        <li
-                            className={
-                                currentPage === "/Portfolio"
-                                    ? "is-active"
-                                    : "is-inactive"
-                            }
+                            <span className="icon is-small"
+                            ><i className="fa-regular fa-user" aria-hidden="true"></i
+                            ></span>
+                            <span>About Me</span>
+                        </Link>
+
+                        <Link
+                            to="/Portfolio"
+                            className="navbar-item"
                         >
-                            <Link
-                                to="/Portfolio"
-                            >
-                                <span class="icon is-small"
-                                ><i class="fa-regular fa-lightbulb" aria-hidden="true"></i
-                                ></span>
-                                <span>Portfolio</span>
-                            </Link>
-                        </li>
-                        <li
-                            className={
-                                currentPage === "/Contact"
-                                    ? "is-active"
-                                    : "is-inactive"
-                            }
+                            <span className="icon is-small"
+                            ><i className="fa-regular fa-lightbulb" aria-hidden="true"></i
+                            ></span>
+                            <span>Portfolio</span>
+                        </Link>
+
+                        <Link
+                            to="/Contact"
+                            className="navbar-item"
                         >
-                            <Link
-                                to="/Contact"
-                            >
-                                <span class="icon is-small"
-                                ><i class="fa-regular fa-envelope"></i
-                                ></span>
-                                <span>Contact Me</span>
-                            </Link>
-                        </li>
-                        <li
-                            className={
-                                currentPage === "/Resume"
-                                    ? "is-active"
-                                    : "is-inactive"
-                            }
+                            <span className="icon is-small"
+                            ><i className="fa-regular fa-envelope"></i
+                            ></span>
+                            <span>Contact Me</span>
+                        </Link>
+
+                        <Link
+                            to="/Resume"
+                            className="navbar-item"
                         >
-                            <Link
-                                to="/Resume"
-                            >
-                                <span class="icon is-small"
-                                ><i class="far fa-file-alt" aria-hidden="true"></i
-                                ></span>
-                                <span>Resume</span>
-                            </Link>
-                        </li>
-                    </ul>
+                            <span className="icon is-small"
+                            ><i className="far fa-file-alt" aria-hidden="true"></i
+                            ></span>
+                            <span>Resume</span>
+                        </Link>
+                    </div>
                 </div>
             </section>
         </nav>
