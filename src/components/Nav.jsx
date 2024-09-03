@@ -4,25 +4,31 @@ import { useState } from "react";
 export default function Nav() {
     const currentPage = useLocation().pathname;
     const [isMenuActive, setIsMenuActive] = useState(false);
+    const [activeLink, setActiveLink] = useState(false);
 
-    // Toggle the menu visibility
+    // Toggle the hamburger menu visibility
     const toggleMenu = () => {
         setIsMenuActive(!isMenuActive);
     };
 
+    // Set link status to active
+    const handleClickLink = (linkName) => {
+        setActiveLink(linkName)
+    }
+
     return (
         <nav>
             <section className="navContent navbar">
-                <div className="navbar-brand" style={{marginRight: "36px"}}>
-                    <h1 className="title is-1" style={{marginRight: "36px"}}>JASON M. RYAN</h1>
+                <div className="navbar-brand" style={{ marginRight: "36px" }}>
+                    <h1 className="title is-1" style={{ marginRight: "36px" }}>JASON M. RYAN</h1>
 
-                    <a 
-                        role="button" 
-                        className={`navbar-burger ${isMenuActive ? "is-active" : ""}`} 
-                        aria-label="menu" 
-                        aria-expanded="false" 
+                    <a
+                        role="button"
+                        className={`navbar-burger ${isMenuActive ? "is-active" : ""}`}
+                        aria-label="menu"
+                        aria-expanded="false"
                         data-target="portfolioNavbar"
-                        onClick={toggleMenu} 
+                        onClick={toggleMenu}
                     >
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -31,8 +37,8 @@ export default function Nav() {
                     </a>
                 </div>
 
-                <div 
-                    id="portfolioNavbar" 
+                <div
+                    id="portfolioNavbar"
                     className={`navbar-menu ${isMenuActive ? "is-active" : ""}`}
                 >
                     <div className="navbar-start">
@@ -40,45 +46,73 @@ export default function Nav() {
                         <Link
                             to="/"
                             className="navbar-item"
-                            style={{ textDecoration: 'none' }}
+                            onClick={() => handleClickLink('about')}
+                            style={{ 
+                                textDecoration: 'none', 
+                                color: activeLink === 'about' ? '#007bff' : 'white',
+                                backgroundColor: activeLink === 'about' ? 'white' : ''
+                            }}
                         >
-                            <span className="icon is-small"
-                            ><i className="fa-regular fa-user" aria-hidden="true"></i
-                            ></span>
-                            <span>About Me</span>
+                            <div className="navbar-item-format">
+                                <span className="icon is-small"
+                                ><i className="fa-regular fa-user" aria-hidden="true"></i
+                                ></span>
+                                <span style={{marginLeft: "7px"}}>About Me</span>
+                            </div>
                         </Link>
 
                         <Link
                             to="/Portfolio"
                             className="navbar-item"
-                            style={{ textDecoration: 'none' }}
+                            onClick={() => handleClickLink('portfolio')}
+                            style={{ 
+                                textDecoration: 'none', 
+                                color: activeLink === 'portfolio' ? '#007bff' : 'white',
+                                backgroundColor: activeLink === 'portfolio' ? 'white' : ''
+                            }}
                         >
-                            <span className="icon is-small"
-                            ><i className="fa-regular fa-lightbulb" aria-hidden="true"></i
-                            ></span>
-                            <span>Portfolio</span>
+                            <div className="navbar-item-format">
+                                <span className="icon is-small"
+                                ><i className="fa-regular fa-lightbulb" aria-hidden="true"></i
+                                ></span>
+                                <span style={{marginLeft: "7px"}}>Portfolio</span>
+                            </div>
                         </Link>
 
                         <Link
                             to="/Contact"
                             className="navbar-item"
-                            style={{ textDecoration: 'none' }}
+                            onClick={() => handleClickLink('contact')}
+                            style={{ 
+                                textDecoration: 'none', 
+                                color: activeLink === 'contact' ? '#007bff' : 'white',
+                                backgroundColor: activeLink === 'contact' ? 'white' : ''
+                            }}
                         >
-                            <span className="icon is-small"
-                            ><i className="fa-regular fa-envelope"></i
-                            ></span>
-                            <span>Contact Me</span>
+                            <div className="navbar-item-format">
+                                <span className="icon is-small"
+                                ><i className="fa-regular fa-envelope"></i
+                                ></span>
+                                <span style={{marginLeft: "7px"}}>Contact Me</span>
+                            </div>
                         </Link>
 
                         <Link
                             to="/Resume"
                             className="navbar-item"
-                            style={{ textDecoration: 'none' }}
+                            onClick={() => handleClickLink('resume')}
+                            style={{ 
+                                textDecoration: 'none', 
+                                color: activeLink === 'resume' ? '#007bff' : 'white',
+                                backgroundColor: activeLink === 'resume' ? 'white' : ''
+                            }}
                         >
-                            <span className="icon is-small"
-                            ><i className="far fa-file-alt" aria-hidden="true"></i
-                            ></span>
-                            <span>Resume</span>
+                            <div className="navbar-item-format">
+                                <span className="icon is-small"
+                                ><i className="far fa-file-alt" aria-hidden="true"></i
+                                ></span>
+                                <span style={{marginLeft: "7px"}}>Resume</span>
+                            </div>
                         </Link>
                     </div>
                 </div>

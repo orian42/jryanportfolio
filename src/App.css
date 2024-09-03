@@ -47,6 +47,14 @@ main {
   align-self: center;
 }
 
+.navbar-item-format {
+  text-decoration: none;
+}
+
+.navbar-item-format:hover {
+  color: #007bff;
+}
+
 @media (max-width: 1249px) {
   .navContent {
     flex-direction: column;
@@ -68,5 +76,8 @@ main {
   }
   h1 {
     align-self: center;
+  }
+  .navbar-item-format {
+    color: #007bff;
   }
 }
