@@ -52,7 +52,16 @@ main {
 }
 
 .navbar-item-format:hover {
-  color: #007bff;
+  color: #485cfc
+  ;
+}
+
+.icon i {
+  transition: color 0.3s;
+}
+
+.icon i:hover {
+  color: #485cfc;
 }
 
 @media (max-width: 1249px) {
@@ -78,6 +87,6 @@ main {
     align-self: center;
   }
   .navbar-item-format {
-    color: #007bff;
+    color: #485cfc;
   }
 }

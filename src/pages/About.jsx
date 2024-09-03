@@ -7,6 +7,7 @@ export default function About() {
                 <div id="aboutContent" style={{ display: 'flex', justifyContent: "space-around" }}>
                     <div id="aboutPic">
                         <img
+                            className="shadow"
                             src="./src/assets/jason.JPEG"
                             alt="A picture of Jason!"
                             style={{
