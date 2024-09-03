@@ -63,67 +63,72 @@ export default function Contact() {
     };
 
     return (
-        <div>
-            <h1 class="title is-2">CONTACT ME</h1>
-            <form
-                style={{ margin: '10px', width: '50%' }}
+        <div style={{display: "flex", flexDirection: "column"}}>
+            <h1 className="title is-2">CONTACT ME</h1>
+            <div 
+                id="contactForm"
+                className="notification is-success shadow"
             >
-                <div class="field">
-                    <label htmlFor="name" class="label">Name:</label>
-                    <input
-                        id="name"
-                        type="text"
-                        name="name"
-                        class="input is-link"
-                        placeholder="Name"
-                        value={userName}
-                        onChange={handleInputChange}
-                        onBlur={handleBlur}
-                    />
-                </div>
+                <form
+                    style={{ margin: '10px', width: '95%' }}
+                >
+                    <div className="field">
+                        <label htmlFor="name" className="label">Name:</label>
+                        <input
+                            id="name"
+                            type="text"
+                            name="name"
+                            className="input is-link"
+                            placeholder="Name"
+                            value={userName}
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                        />
+                    </div>
 
-                <div class="field">
-                    <label htmlFor="email" class="label">Email:</label>
-                    <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        class="input is-link"
-                        placeholder="Email"
-                        value={email}
-                        onChange={handleInputChange}
-                        onBlur={handleBlur}
-                    />
-                </div>
+                    <div className="field">
+                        <label htmlFor="email" className="label">Email:</label>
+                        <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            className="input is-link"
+                            placeholder="Email"
+                            value={email}
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                        />
+                    </div>
 
-                <div class="field">
-                    <label htmlFor="message" class="label">Message:</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="Type your message here"
-                        class="textarea is-link"
-                        rows="5"
-                        value={message}
-                        onChange={handleInputChange}
-                        onBlur={handleBlur}
-                    />
-                </div>
+                    <div className="field">
+                        <label htmlFor="message" className="label">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Type your message here"
+                            className="textarea is-link"
+                            rows="5"
+                            value={message}
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                        />
+                    </div>
 
-                <div class="field">
-                    <button
-                        type="submit"
-                        class="button is-link"
-                        disabled={buttonDisable}
-                    >Submit</button>
-                </div>
+                    <div className="field">
+                        <button
+                            type="submit"
+                            className="button is-link"
+                            disabled={buttonDisable}
+                        >Submit</button>
+                    </div>
 
-            </form>
+                </form>
+            </div>
 
             {/* Error messages will display here */}
             {errorMessage && (
-                <article class="message is-danger">
-                    <div class="message-header">
+                <article className="message is-danger">
+                    <div className="message-header">
                         <p>{errorMessage}</p>
                     </div>
                 </article>

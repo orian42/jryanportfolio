@@ -11,15 +11,6 @@ main {
   height: 70%;
 }
 
-/* a {
-  border: 2px black solid;
-  padding: 5px;
-  text-decoration: none;
-  color: inherit;
-  font-weight: bolder;
-  background-color: hotpink;
-} */
-
 .shadow {
   box-shadow: 2px 4px 10px 0 grey;
 }
@@ -51,6 +42,11 @@ main {
   justify-content: center;
 }
 
+#contactForm {
+  width: 70%;
+  align-self: center;
+}
+
 @media (max-width: 1249px) {
   .navContent {
     flex-direction: column;
@@ -66,5 +62,11 @@ main {
   }
   #aboutText {
     width: 90%;
+  }
+  #contactForm {
+    width: 95%;
+  }
+  h1 {
+    align-self: center;
   }
 }

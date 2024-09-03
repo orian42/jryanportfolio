@@ -9,15 +9,15 @@ function App() {
   return (
     <>
       <div className="container">
-        <header class="notification is-link shadow">
+        <header className="notification is-link shadow">
           <Nav />
         </header>
 
-        <main class="notification shadow">
+        <main className="notification shadow">
           <Outlet />
         </main>
 
-        <footer class="notification is-link shadow">
+        <footer className="notification is-link shadow">
           <Footer />
         </footer>
       </div>

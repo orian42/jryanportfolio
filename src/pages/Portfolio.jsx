@@ -1,9 +1,11 @@
 export default function Portfolio() {
 
     return (
-        <div>
-            <h1 class="title is-2">PORTFOLIO</h1>
-            <p>This is the PORTFOLIO content.</p>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+            <h1 className="title is-2">PORTFOLIO</h1>
+            <div>
+                <p>This is the PORTFOLIO content.</p>
+            </div>
         </div>
     )
 }

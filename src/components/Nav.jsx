@@ -40,6 +40,7 @@ export default function Nav() {
                         <Link
                             to="/"
                             className="navbar-item"
+                            style={{ textDecoration: 'none' }}
                         >
                             <span className="icon is-small"
                             ><i className="fa-regular fa-user" aria-hidden="true"></i
@@ -50,6 +51,7 @@ export default function Nav() {
                         <Link
                             to="/Portfolio"
                             className="navbar-item"
+                            style={{ textDecoration: 'none' }}
                         >
                             <span className="icon is-small"
                             ><i className="fa-regular fa-lightbulb" aria-hidden="true"></i
@@ -60,6 +62,7 @@ export default function Nav() {
                         <Link
                             to="/Contact"
                             className="navbar-item"
+                            style={{ textDecoration: 'none' }}
                         >
                             <span className="icon is-small"
                             ><i className="fa-regular fa-envelope"></i
@@ -70,6 +73,7 @@ export default function Nav() {
                         <Link
                             to="/Resume"
                             className="navbar-item"
+                            style={{ textDecoration: 'none' }}
                         >
                             <span className="icon is-small"
                             ><i className="far fa-file-alt" aria-hidden="true"></i
