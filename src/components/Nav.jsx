@@ -13,8 +13,8 @@ export default function Nav() {
     return (
         <nav>
             <section className="navContent navbar">
-                <div className="navbar-brand">
-                    <h1 className="title is-1">JASON M. RYAN</h1>
+                <div className="navbar-brand" style={{marginRight: "36px"}}>
+                    <h1 className="title is-1" style={{marginRight: "36px"}}>JASON M. RYAN</h1>
 
                     <a 
                         role="button" 

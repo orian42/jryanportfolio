@@ -20,6 +20,10 @@ main {
   background-color: hotpink;
 } */
 
+.shadow {
+  box-shadow: 2px 4px 10px 0 grey;
+}
+
 .navContent {
   height: 50%;
   display: flex;
@@ -35,8 +39,32 @@ main {
   justify-content: flex-start;
 }
 
+#aboutPic {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+#aboutText {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
 @media (max-width: 1249px) {
   .navContent {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  #aboutContent {
+    flex-direction: column;
+  }
+  #aboutPic {
+    width: 90%;
+  }
+  #aboutText {
+    width: 90%;
   }
 }
