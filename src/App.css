@@ -52,8 +52,7 @@ main {
 }
 
 .navbar-item-format:hover {
-  color: #485cfc
-  ;
+  color: #485cfc;
 }
 
 .icon i {
@@ -62,6 +61,78 @@ main {
 
 .icon i:hover {
   color: #485cfc;
+}
+
+.portfolioItem {
+  width: 300px;
+  padding-top: 300px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.portfolioItem::before {
+  content: '';
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.5s ease;
+}
+
+.portfolioItem:hover::before {
+  opacity: 0.2;
+}
+
+.app1::before {
+  background-image: url('./src/assets/dxdScreenshot.png');
+}
+
+.app3::before {
+  background-image: url('./src/assets/slcEventsScreenshot.png');
+}
+
+.app4::before {
+  background-image: url('./src/assets/weatherScreenshot.png');
+}
+
+.app5::before {
+  background-image: url('./src/assets/firstBlogScreenshot.png');
+}
+
+.app6::before {
+  background-image: url('./src/assets/empPayTrackerScreenshot.png');
+}
+
+.portfolioContent {
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #485cfc;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5 ease;
+}
+
+.portfolioContent a {
+  margin-right: 36px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.portfolioContent:hover {
+  opacity: 1;
 }
 
 @media (max-width: 1249px) {
@@ -74,18 +145,23 @@ main {
   #aboutContent {
     flex-direction: column;
   }
+
   #aboutPic {
     width: 90%;
   }
+
   #aboutText {
     width: 90%;
   }
+
   #contactForm {
     width: 95%;
   }
+
   h1 {
     align-self: center;
   }
+
   .navbar-item-format {
     color: #485cfc;
   }

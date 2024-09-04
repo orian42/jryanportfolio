@@ -3,40 +3,136 @@ export default function Portfolio() {
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
             <h1 className="title is-2">PORTFOLIO</h1>
-            <div>
-                <div
-                    className="shadow"
-                    style={{
-                        backgroundImage: `url('./src/assets/slcEventsScreenshot.png')`,
-                        width: '30%',
-                        paddingTop: '30%',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        position: 'relative'
-                    }}
+            <div
+                style= {{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    flexWrap: "wrap"
+                }}
+            >
+
+                <div 
+                    className="portfolioItem shadow app1"
                 >
-                    <div
-                        style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            color: 'white'
-                        }}
-                    >
-                        <a href="https://arrozconpollo220.github.io/SLC-Events/index.html">SLC Events</a>
-                        <a href='https://github.com/orian42/SLC-Events' target="_blank">
-                            <span class="icon">
-                                <i class="fa-brands fa-github fa-3x" aria-hidden="true"></i>
+                    <div className="portfolioContent">
+                        <div>
+                            <span>
+                                <a
+                                    href="https://deadxfaces.onrender.com/"
+                                    target="_blank"
+                                    style={{ textDecoration: 'none' }}
+                                >Dead X Faces</a>
                             </span>
-                        </a>
+                            <a href='https://github.com/orian42/DeadXFaces' target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <p>Full-Stack MVC Application</p>
                     </div>
                 </div>
+
+                <div className="portfolioItem shadow app2">
+                    <div className="portfolioContent">
+                        <div>
+                            <span>
+                                <a
+                                    href="https://arrozconpollo220.github.io/SLC-Events/index.html"
+                                    target="_blank"
+                                    style={{ textDecoration: 'none' }}
+                                >SLC Events</a>
+                            </span>
+                            <a href='https://github.com/orian42/SLC-Events' target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <p>Third-Party API</p>
+                    </div>
+                </div>
+
+                <div className="portfolioItem shadow app3">
+                    <div className="portfolioContent">
+                        <div>
+                            <span>
+                                <a
+                                    href="https://arrozconpollo220.github.io/SLC-Events/index.html"
+                                    target="_blank"
+                                    style={{ textDecoration: 'none' }}
+                                >SLC Events</a>
+                            </span>
+                            <a href='https://github.com/orian42/SLC-Events' target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <p>Third-Party API</p>
+                    </div>
+                </div>
+
+                <div className="portfolioItem shadow app4">
+                    <div className="portfolioContent">
+                        <div>
+                            <span>
+                                <a
+                                    href="https://orian42.github.io/weather/"
+                                    target="_blank"
+                                    style={{ textDecoration: 'none' }}
+                                >Weather Dashboard</a>
+                            </span>
+                            <a href='https://github.com/orian42/weather' target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <p>Third-Party API</p>
+                    </div>
+                </div>
+
+                <div className="portfolioItem shadow app5">
+                    <div className="portfolioContent">
+                        <div>
+                            <span>
+                                <a
+                                    href="https://orian42.github.io/personal_blog/index.html"
+                                    target="_blank"
+                                    style={{ textDecoration: 'none' }}
+                                >Personal Blog</a>
+                            </span>
+                            <a href='https://github.com/orian42/personal_blog' target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+
+                <div className="portfolioItem shadow app6">
+                    <div className="portfolioContent">
+                        <div>
+                            <span>
+                                <a
+                                    href="https://orian42.github.io/payroll/"
+                                    target="_blank"
+                                    style={{ textDecoration: 'none' }}
+                                >Payroll Tracker</a>
+                            </span>
+                            <a href='https://github.com/orian42/payroll' target="_blank">
+                                <span class="icon">
+                                    <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <p>Javascript</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     )
