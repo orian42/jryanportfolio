@@ -16,7 +16,7 @@ export default function Portfolio() {
 
                 <AppProject
                     appClass="app1"
-                    appLink="https://deadxfaces.onrender.com/"
+                    appLink="https://deadxfaces.up.railway.app/"
                     title="Dead X Faces"
                     repoLink="https://github.com/orian42/DeadXFaces"
                     appDescription="Full-Stack MVC Application"
