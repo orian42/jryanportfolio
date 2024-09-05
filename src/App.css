@@ -98,7 +98,7 @@ main {
 }
 
 .app1::before {
-  background-image: url('images/dxdScreenshot.png');
+  background-image: url('/assets/images/dxdScreenshot.png');
 }
 
 .app2::before {
