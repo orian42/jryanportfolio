@@ -56,10 +56,12 @@ export default function Contact() {
         //prevent default behavior
         e.preventDefault();
 
-        //Clear field values
+        //Clear field values and reset form
         setUserName('');
         setEmail('');
         setMessage('');
+        setErrorMessage('');
+        setButtonDisable(true);
     };
 
     // Render "contact me" form
@@ -72,6 +74,7 @@ export default function Contact() {
             >
                 <form
                     style={{ margin: '10px', width: '95%' }}
+                    onSubmit={handleSubmit}
                 >
                     <div className="field">
                         <label htmlFor="name" className="label">Name:</label>
