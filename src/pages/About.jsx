@@ -1,5 +1,6 @@
 export default function About() {
 
+    // Render "about me" pic and bio
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
             <h1 className="title is-2">About Me</h1>

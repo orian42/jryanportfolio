@@ -2,9 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 export default function Nav() {
-    const currentPage = useLocation().pathname;
     const [isMenuActive, setIsMenuActive] = useState(false);
-    const [activeLink, setActiveLink] = useState(false);
+    const [activeLink, setActiveLink] = useState('about');
 
     // Toggle the hamburger menu visibility
     const toggleMenu = () => {
@@ -16,6 +15,7 @@ export default function Nav() {
         setActiveLink(linkName)
     }
 
+    // Render Navigation
     return (
         <nav>
             <section className="navContent navbar">

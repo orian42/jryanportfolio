@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 
 function App() {
 
+  // Render the page structure
   return (
     <>
       <div className="container">

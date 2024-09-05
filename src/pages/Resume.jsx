@@ -1,5 +1,6 @@
 export default function Resume() {
 
+    // Render resume download link and proficiency lists
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
             <h1 className="title is-2">My Resume</h1>

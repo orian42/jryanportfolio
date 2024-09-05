@@ -62,6 +62,7 @@ export default function Contact() {
         setMessage('');
     };
 
+    // Render "contact me" form
     return (
         <div style={{display: "flex", flexDirection: "column"}}>
             <h1 className="title is-2">Contact Me</h1>

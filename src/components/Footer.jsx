@@ -1,6 +1,6 @@
 export default function Footer() {
 
-
+    // Render social media links
     return (
         <footer style={{ display: 'flex', justifyContent: 'center', padding: '5px' }}>
             <div class="tabs is-toggle is-toggle-rounded">

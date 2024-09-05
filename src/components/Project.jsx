@@ -2,6 +2,7 @@ import React from "react";
 
 const AppProject = ({ appClass, appLink, title, repoLink, appDescription }) => {
     
+    // Render a card with a project screenshot, title, and links to deployed app and repo
     return (
         <div className={`portfolioItem shadow ${appClass}`}>
             <div className="portfolioContent">

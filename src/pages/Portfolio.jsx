@@ -3,6 +3,7 @@ import AppProject from "../components/Project";
 
 export default function Portfolio() {
 
+    // Render portfolio content
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
             <h1 className="title is-2">Portfolio</h1>
@@ -13,7 +14,7 @@ export default function Portfolio() {
                     flexWrap: "wrap"
                 }}
             >
-
+                {/* Render portfolio projects utilizing the Project component */}
                 <AppProject
                     appClass="app1"
                     appLink="https://deadxfaces.up.railway.app/"
