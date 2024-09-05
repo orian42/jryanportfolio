@@ -4,6 +4,7 @@ import { useState } from "react";
 export default function Nav() {
     const [isMenuActive, setIsMenuActive] = useState(false);
     const [activeLink, setActiveLink] = useState('about');
+    
 
     // Toggle the hamburger menu visibility
     const toggleMenu = () => {
@@ -53,7 +54,7 @@ export default function Nav() {
                             onClick={() => handleClickLink('about')}
                             style={{ 
                                 textDecoration: 'none', 
-                                color: activeLink === 'about' ? '#007bff' : 'white',
+                                color: activeLink === 'about' ? '#007bff' : 'white !important',
                                 backgroundColor: activeLink === 'about' ? 'white' : ''
                             }}
                         >
@@ -71,7 +72,7 @@ export default function Nav() {
                             onClick={() => handleClickLink('portfolio')}
                             style={{ 
                                 textDecoration: 'none', 
-                                color: activeLink === 'portfolio' ? '#007bff' : 'white',
+                                color: activeLink === 'portfolio' ? '#007bff' : 'white !important',
                                 backgroundColor: activeLink === 'portfolio' ? 'white' : ''
                             }}
                         >
@@ -89,7 +90,7 @@ export default function Nav() {
                             onClick={() => handleClickLink('contact')}
                             style={{ 
                                 textDecoration: 'none', 
-                                color: activeLink === 'contact' ? '#007bff' : 'white',
+                                color: activeLink === 'contact' ? '#007bff' : 'white !important',
                                 backgroundColor: activeLink === 'contact' ? 'white' : ''
                             }}
                         >
@@ -107,7 +108,7 @@ export default function Nav() {
                             onClick={() => handleClickLink('resume')}
                             style={{ 
                                 textDecoration: 'none', 
-                                color: activeLink === 'resume' ? '#007bff' : 'white',
+                                color: activeLink === 'resume' ? '#007bff' : 'white !important',
                                 backgroundColor: activeLink === 'resume' ? 'white' : ''
                             }}
                         >
