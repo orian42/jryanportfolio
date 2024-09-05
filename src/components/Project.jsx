@@ -1,6 +1,7 @@
 import React from "react";
 
-const Project = ({ appClass, appLink, title, repoLink, appDescription }) {
+const AppProject = ({ appClass, appLink, title, repoLink, appDescription }) => {
+    
     return (
         <div className={`portfolioItem shadow ${appClass}`}>
             <div className="portfolioContent">
@@ -24,4 +25,4 @@ const Project = ({ appClass, appLink, title, repoLink, appDescription }) {
     );
 };
 
-export default Project;
+export default AppProject;
