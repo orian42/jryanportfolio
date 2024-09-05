@@ -98,27 +98,27 @@ main {
 }
 
 .app1::before {
-  background-image: url('/assets/images/dxdScreenshot.png');
+  background-image: url('images/dxdscreenshot.png');
 }
 
 .app2::before {
-  background-image: url('images/techBlogScreenshot.png');
+  background-image: url('images/techblogscreenshot.png');
 }
 
 .app3::before {
-  background-image: url('images/slcEventsScreenshot.png');
+  background-image: url('images/slceventsscreenshot.png');
 }
 
 .app4::before {
-  background-image: url('images/weatherScreenshot.png');
+  background-image: url('images/weatherscreenshot.png');
 }
 
 .app5::before {
-  background-image: url('images/firstBlogScreenshot.png');
+  background-image: url('images/firstblogscreenshot.png');
 }
 
 .app6::before {
-  background-image: url('images/empPayTrackerScreenshot.png');
+  background-image: url('images/emppaytrackerscreenshot.png');
 }
 
 .portfolioContent {
