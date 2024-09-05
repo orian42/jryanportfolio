@@ -41,7 +41,7 @@ export default function Portfolio() {
                 <AppProject
                     appClass="app4"
                     appLink="https://orian42.github.io/weather/"
-                    title="Weather Dashboard"
+                    title={<>Weather<br />Dashboard</>}
                     repoLink="https://github.com/orian42/weather"
                     appDescription="Third-Party API"
                 />
