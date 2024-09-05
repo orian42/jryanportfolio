@@ -8,7 +8,7 @@ export default function Resume() {
                 className="box has-background-success shadow"
                 style={{ display: "flex", justifyContent: "center" }}
             >
-                <p className="is-size-5">Download my <a href='public/resume.pdf' download='resume.pdf'>
+                <p className="is-size-5">Download my <a href='resume.pdf' download='resume.pdf'>
                     Resume</a></p>
             </div>
 
