@@ -8,7 +8,7 @@ export default function About() {
                     <div id="aboutPic">
                         <img
                             className="shadow"
-                            src="public/images/jason.JPEG"
+                            src="images/jason.JPEG"
                             alt="A picture of Jason!"
                             style={{
                                 margin: '5px',

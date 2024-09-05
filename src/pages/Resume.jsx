@@ -4,12 +4,12 @@ export default function Resume() {
         <div style={{ display: "flex", flexDirection: "column" }}>
             <h1 className="title is-2">My Resume</h1>
 
-            <div 
+            <div
                 className="box has-background-success shadow"
                 style={{ display: "flex", justifyContent: "center" }}
             >
                 <p className="is-size-5">Download my <a href='public/resume.pdf' download='resume.pdf'>
-                        Resume</a></p>
+                    Resume</a></p>
             </div>
 
             <div className="columns">
@@ -39,8 +39,9 @@ export default function Resume() {
                                 <li className="has-text-link is-size-5 py-2">REST</li>
                             </ul>
                         </div>
-                    </div></div></div>
-
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
