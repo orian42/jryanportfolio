@@ -2,7 +2,7 @@ export default function Portfolio() {
 
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
-            <h1 className="title is-2">PORTFOLIO</h1>
+            <h1 className="title is-2">Portfolio</h1>
             <div
                 style= {{
                     display: "flex",
@@ -38,18 +38,18 @@ export default function Portfolio() {
                         <div>
                             <span>
                                 <a
-                                    href="https://arrozconpollo220.github.io/SLC-Events/index.html"
+                                    href="https://techblog-production-acca.up.railway.app/"
                                     target="_blank"
                                     style={{ textDecoration: 'none' }}
-                                >SLC Events</a>
+                                >The Tech Blog</a>
                             </span>
-                            <a href='https://github.com/orian42/SLC-Events' target="_blank">
+                            <a href='https://github.com/orian42/techBlog' target="_blank">
                                 <span class="icon">
                                     <i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </div>
-                        <p>Third-Party API</p>
+                        <p>Full-Stack MVC Application</p>
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@ export default function Portfolio() {
                                     href="https://orian42.github.io/weather/"
                                     target="_blank"
                                     style={{ textDecoration: 'none' }}
-                                >Weather Dashboard</a>
+                                >Weather<br></br> Dashboard</a>
                             </span>
                             <a href='https://github.com/orian42/weather' target="_blank">
                                 <span class="icon">

@@ -5,11 +5,11 @@ export default function Resume() {
             <h1 className="title is-2">MY RESUME</h1>
 
             <div 
-                className="notification is-success shadow"
+                className="box has-background-success shadow"
                 style={{ display: "flex", justifyContent: "center" }}
             >
-                <p className="is-size-5 py-2">Download my <a href='./src/assets/resume.pdf' download='resume.pdf'>
-                        RESUME</a></p>
+                <p className="is-size-5">Download my <a href='./src/assets/resume.pdf' download='resume.pdf'>
+                        Resume</a></p>
             </div>
 
             <div className="columns">
@@ -18,7 +18,7 @@ export default function Resume() {
                     <div className="columns">
                         <div className="column">
                             <h2 className="title is-4">Front-end Proficiencies</h2>
-                            <ul className="box has-background-light">
+                            <ul className="box has-background-light shadow">
                                 <li className="has-text-link is-size-5 py-2">HTML</li>
                                 <li className="has-text-link is-size-5 py-2">CSS</li>
                                 <li className="has-text-link is-size-5 py-2">JavaScript</li>
@@ -30,7 +30,7 @@ export default function Resume() {
                         </div>
                         <div className="column">
                             <h2 className="title is-4">Back-end Proficiencies</h2>
-                            <ul className="box has-background-light">
+                            <ul className="box has-background-light shadow">
                                 <li className="has-text-link is-size-5 py-2">API's</li>
                                 <li className="has-text-link is-size-5 py-2">Node</li>
                                 <li className="has-text-link is-size-5 py-2">Express</li>

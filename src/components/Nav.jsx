@@ -22,9 +22,8 @@ export default function Nav() {
                 <div className="navbar-brand" style={{ marginRight: "36px"}}>
                     <div>
                         <h1 
-                            className="title is-1" 
-                            style={{ marginRight: "36px"}}
-                        >Jason M. Ryan</h1>
+                            className="title mainTitle" 
+                        >JASON RYAN</h1>
                     </div>
 
                     <a

@@ -64,7 +64,7 @@ export default function Contact() {
 
     return (
         <div style={{display: "flex", flexDirection: "column"}}>
-            <h1 className="title is-2">CONTACT ME</h1>
+            <h1 className="title is-2">Contact Me</h1>
             <div 
                 id="contactForm"
                 className="notification is-success shadow"

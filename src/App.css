@@ -11,6 +11,15 @@ main {
   height: 70%;
 }
 
+.mainTitle {
+  font-size: 48px;
+  margin-right: 36px;
+}
+
+.notification {
+  min-width: 300px;
+}
+
 .shadow {
   box-shadow: 2px 4px 10px 0 grey;
 }
@@ -85,11 +94,15 @@ main {
 }
 
 .portfolioItem:hover::before {
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .app1::before {
   background-image: url('./src/assets/dxdScreenshot.png');
+}
+
+.app2::before {
+  background-image: url('./src/assets/techBlogScreenshot.png');
 }
 
 .app3::before {
@@ -116,16 +129,18 @@ main {
     bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: start;
     color: #485cfc;
     z-index: 1;
     opacity: 0;
     transition: opacity 0.5 ease;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .portfolioContent a {
-  margin-right: 36px;
+  margin-right: 24px;
   text-decoration: none;
   font-size: 24px;
   font-weight: bolder;
@@ -142,6 +157,11 @@ main {
 }
 
 @media (max-width: 1024px) {
+  .mainTitle {
+    font-size: 36px;
+    margin-right: 0px;
+  }
+  
   #aboutContent {
     flex-direction: column;
   }
