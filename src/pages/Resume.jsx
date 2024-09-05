@@ -2,13 +2,13 @@ export default function Resume() {
 
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
-            <h1 className="title is-2">MY RESUME</h1>
+            <h1 className="title is-2">My Resume</h1>
 
             <div 
                 className="box has-background-success shadow"
                 style={{ display: "flex", justifyContent: "center" }}
             >
-                <p className="is-size-5">Download my <a href='./src/assets/resume.pdf' download='resume.pdf'>
+                <p className="is-size-5">Download my <a href='public/resume.pdf' download='resume.pdf'>
                         Resume</a></p>
             </div>
 
