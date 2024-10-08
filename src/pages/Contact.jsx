@@ -59,14 +59,14 @@ export default function Contact() {
 
         // EmailJS function to send the email
         emailjs.send(
-            process.env.REACT_APP_EMAILJS_SERVICE_ID,
-            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            'service_qhonx39',
+            'template_fsgpwwd',
             {
                 user_name: userName,
                 user_email: email,
                 message: message,
             },
-            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+            'O8rrvVL9rhtH-sOIr'
         ).then((result) => {
             console.log('Email sent successfully', result.text);
             // Optionally show success message to user
