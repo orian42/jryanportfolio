@@ -59,14 +59,14 @@ export default function Contact() {
 
         // EmailJS function to send the email
         emailjs.send(
-            'service_qhonx39',
-            'template_fsgpwwd',
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
             {
                 user_name: userName,
                 user_email: email,
                 message: message,
             },
-            'O8rrvVL9rhtH-sOIr'
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
         ).then((result) => {
             console.log('Email sent successfully', result.text);
             // Optionally show success message to user
