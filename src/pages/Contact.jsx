@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from 'emailjs-com';
+require('dotenv').config();
 
 // Importing this help function to validate the email input
 import { validateEmail } from "../utils/helpers";
@@ -59,14 +60,14 @@ export default function Contact() {
 
         // EmailJS function to send the email
         emailjs.send(
-            'service_qhonx39',
-            'template_fsgpwwd',
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
             {
                 user_name: userName,
                 user_email: email,
                 message: message,
             },
-            'O8rrvVL9rhtH-sOIr'
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         ).then((result) => {
             console.log('Email sent successfully', result.text);
             // Optionally show success message to user
