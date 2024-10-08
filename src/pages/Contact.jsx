@@ -1,6 +1,5 @@
 import { useState } from "react";
 import emailjs from 'emailjs-com';
-require('dotenv').config();
 
 // Importing this help function to validate the email input
 import { validateEmail } from "../utils/helpers";
