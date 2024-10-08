@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 
 // Importing this help function to validate the email input
 import { validateEmail } from "../utils/helpers";
@@ -56,6 +57,24 @@ export default function Contact() {
         //prevent default behavior
         e.preventDefault();
 
+        // EmailJS function to send the email
+        emailjs.send(
+            'service_qhonx39',
+            'template_fsgpwwd',
+            {
+                user_name: userName,
+                user_email: email,
+                message: message,
+            },
+            'O8rrvVL9rhtH-sOIr'
+        ).then((result) => {
+            console.log('Email sent successfully', result.text);
+            // Optionally show success message to user
+        }, (error) => {
+            console.log('Failed to send email', error.text);
+            // Optionally show error message to user
+        });
+
         //Clear field values and reset form
         setUserName('');
         setEmail('');
@@ -66,9 +85,9 @@ export default function Contact() {
 
     // Render "contact me" form
     return (
-        <div style={{display: "flex", flexDirection: "column"}}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
             <h1 className="title is-2">Contact Me</h1>
-            <div 
+            <div
                 id="contactForm"
                 className="notification is-success shadow"
             >
