@@ -36,7 +36,7 @@ export default function Resume() {
                                 <li className="has-text-link is-size-5 py-2">Node</li>
                                 <li className="has-text-link is-size-5 py-2">Express</li>
                                 <li className="has-text-link is-size-5 py-2">MySQL/Sequelize</li>
-                                <li className="has-text-link is-size-5 py-2">MondoDB/Mongoose</li>
+                                <li className="has-text-link is-size-5 py-2">MongoDB/Mongoose</li>
                                 <li className="has-text-link is-size-5 py-2">REST</li>
                             </ul>
                         </div>
